@@ -38,7 +38,6 @@ copy.addEventListener("click", () => {
     if(copy.classList.contains('able')){
         copyPassword();
     }
-
 });
 
 function verifyValues(){
@@ -146,5 +145,5 @@ function allowCopy(password){
 
 function copyPassword(){
     navigator.clipboard.writeText(visor.textContent);
-    window.alert('Senha copiada com sucesso!');
+    alert('Senha copiada com sucesso!');
 }
