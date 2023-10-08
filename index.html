@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="styles/index.css">
+    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+    <title>GERADOR DE SENHAS</title>
+</head>
+<body>
+    <main>
+        <div class="copy">
+            <img src="" alt="">
+        </div>
+        <h1 class="title">GERADOR DE SENHAS</h1>
+        <p class="visor"></p>
+        <div class="inputs">
+            <div class="letters">
+                <label>
+                    <input type="number" max="7" min="0" class="lmin">
+                    QTD. Letras minúsculas
+                </label>
+                <label>
+                    <input type="number" max="7" min="0" class="lmai">
+                    QTD. Letras maiúsculas
+                </label>
+            </div>
+
+            <div class="nandc">
+                <label>
+                    <input type="number" max="7" min="0" class="num">
+                    QTD. Números
+                </label>
+                <label>
+                    <input type="number" max="7" min="0" class="char">
+                    QTD. Caracteres especiais
+                </label>
+            </div>
+        </div>
+        <div class="ee">
+            <label>
+                <input type="checkbox" class="randomize">
+                Embaralhar
+            </label>
+            <p class="extra">(*QTD. máx. para todos os inputs = 7)</p>
+        </div>
+        <button class="generate"><span>GERAR SENHA</span></button>
+        <div class="loading"></div>
+    </main>
+    <div class="gif">
+        <img src="assets/images/kirby.gif">
+    </div>
+
+    <script src="scripts/index.js"></script>
+</body>
+</html>
