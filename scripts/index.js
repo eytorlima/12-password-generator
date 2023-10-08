@@ -5,6 +5,7 @@ const lMai = document.querySelector('.lmai');
 const num = document.querySelector('.num');
 const char = document.querySelector('.char');
 const randomize = document.querySelector('.randomize');
+const copy = document.querySelector('.copy');
 
 window.addEventListener("load", () => {
     lMai.value = 0;
@@ -17,7 +18,7 @@ generate.addEventListener("click", () => {
     verifyValues();
 
     var password = '';
-    
+
     password += generateLetter();
     password += generateBigLetter();
     password += generateNumber();
@@ -26,8 +27,18 @@ generate.addEventListener("click", () => {
     if(randomize.checked){
         password = randomizePassword(password);
     }
+
     showPassword(password);
+    allowCopy(password);
+
     password = '';
+});
+
+copy.addEventListener("click", () => {
+    if(copy.classList.contains('able')){
+        copyPassword();
+    }
+
 });
 
 function verifyValues(){
@@ -120,4 +131,20 @@ function randomizePassword(password){
 
 function showPassword(password){
     visor.innerText = password;
+}
+
+function allowCopy(password){
+    if(visor.innerText === password){
+        copy.classList.remove('unable');
+        copy.classList.add('able');
+        if(password === ''){
+            copy.classList.add('unable');
+            copy.classList.remove('able');
+        }
+    }
+}
+
+function copyPassword(){
+    navigator.clipboard.writeText(visor.textContent);
+    window.alert('Senha copiada com sucesso!');
 }
