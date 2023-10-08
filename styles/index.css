@@ -156,7 +156,7 @@ input {
     bottom: -0;
     animation: gifmoves 10s infinite linear;
     animation-name: gifmoves;
-    animation-duration: 5s;
+    animation-duration: 50s;
     animation-iteration-count: infinite;
 }
 
