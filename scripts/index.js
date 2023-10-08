@@ -7,12 +7,12 @@ const char = document.querySelector('.char');
 const randomize = document.querySelector('.randomize');
 const copy = document.querySelector('.copy');
 
-window.addEventListener("load", () => {
-    lMai.value = 0;
-    lMin.value = 0;
-    char.value = 0;
-    num.value = 0;
- });
+// window.addEventListener("load", () => {
+//     lMai.value = 0;
+//     lMin.value = 0;
+//     char.value = 0;
+//     num.value = 0;
+//  });
 
 generate.addEventListener("click", () => {
     verifyValues();
