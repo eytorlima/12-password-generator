@@ -4,8 +4,7 @@ const lMin = document.querySelector('.lmin');
 const lMai = document.querySelector('.lmai');
 const num = document.querySelector('.num');
 const char = document.querySelector('.char');
-
-var password = '';
+const randomize = document.querySelector('.randomize');
 
 window.addEventListener("load", () => {
     lMai.value = 0;
@@ -17,15 +16,17 @@ window.addEventListener("load", () => {
 generate.addEventListener("click", () => {
     verifyValues();
 
+    var password = '';
+    
     password += generateLetter();
     password += generateBigLetter();
     password += generateNumber();
     password += generateChar();
 
-    showPassword();
-
-    console.log(password);
-
+    if(randomize.checked){
+        password = randomizePassword(password);
+    }
+    showPassword(password);
     password = '';
 });
 
@@ -93,6 +94,30 @@ function generateChar(){
     return c;
 }
 
-function showPassword(){
+function randomizePassword(password){
+    var list = [];
+    for(let i = 0; i < password.length; i++){
+        list.push(password[i]);
+    }
+    password = '';
+
+    function embaralharLista(lista) {
+        return lista.sort(function() {
+          return Math.random() - 0.5;
+        });
+      }
+
+    list = list.sort(function() {
+        return Math.random() - 0.5;
+    });
+
+    for(let i = 0; i < list.length; i++){
+        password += list[i];
+    }
+
+    return password;
+}
+
+function showPassword(password){
     visor.innerText = password;
 }
