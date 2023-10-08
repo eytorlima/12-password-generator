@@ -111,12 +111,6 @@ function randomizePassword(password){
     }
     password = '';
 
-    function embaralharLista(lista) {
-        return lista.sort(function() {
-          return Math.random() - 0.5;
-        });
-      }
-
     list = list.sort(function() {
         return Math.random() - 0.5;
     });
