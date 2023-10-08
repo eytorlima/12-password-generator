@@ -217,6 +217,10 @@ input {
         gap: 10px;
     }
 
+    .generate {
+        width: 90%;
+    }
+
     .gif {
         display: none;
     }
