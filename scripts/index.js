@@ -98,7 +98,7 @@ function generateChar(){
         v = 0;
     }
     for(let n = 0; n < v; n++){
-        let ch = Math.floor(Math.random() * 28);
+        let ch = Math.floor(Math.random() * chars.length);
         c += chars[ch];
     }
     return c;
